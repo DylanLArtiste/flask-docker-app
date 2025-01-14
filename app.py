@@ -1,8 +1,15 @@
-from flask import Flask # type: ignore
+from flask import Flask, app # type: ignore
 from datetime import datetime
 import socket
+import os
+from pymongo import MongoClient # type: ignore
 
-app = Flask(__name__)
+
+mongo_uri = os.getenv("MONGO_URI")
+
+client = MongoClient(mongo_uri)
+db = client["my_database"]  # Nom de la base de données
+mongo_status = "Connected"
 
 @app.route('/')
 def home():
