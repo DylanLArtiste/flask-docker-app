@@ -1,0 +1,49 @@
+# To activate this environment, use
+#
+#     $ conda activate NET4255
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+token github : 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
+
+clé gpg cestcomplique
+clé B95BAE7852B69236197B5E4CA9469DA6F4FF706E
+
+
+
+tuto git :
+1) git status
+2) git add .        ajouter les fichiers
+3) git commit -m "Challenge 1: Fcaca"
+4) git remote add origin https://github.com/DylanLArtiste/flask-docker-app.git
+5) git push origin main
+6) 
+
+docker :
+créer une image : docker build -t flask_app:v1 .
+executer l'image : docker run -p 5000:5000 flask_app:v1
+
+se connecter : docker login
+créer conteneur : docker compose up --build -d
+taguer le conteneur : docker tag flask_app:latest dylanlartiste/flask_app:v2
+push vers dockerhub : docker push dylanlartiste/flask_app:v2
+
+
+docker compose down --volumes
+
+executer le conteneur : docker compose up --build
+
+
+
+
+
+
+Sélectionner l'interpréteur Python
+
+    Ouvrez votre projet ou script Python dans VSCode.
+    Appuyez sur Ctrl + Shift + P (ou Cmd + Shift + P sur macOS) pour ouvrir la palette de commandes.
+    Tapez "Python: Select Interpreter" et appuyez sur Entrée.
+    

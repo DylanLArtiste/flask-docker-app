@@ -9,17 +9,15 @@ services:
 
 
 
-flask_with-Dockerfile:
-  build: .
-  container_name: simple-flask-app:latest
-  ports:
-    - "5000:5000"
-  volumes:
-    - .:/app
-  depends_on:
-    - mongodb
-  environment:
-    MONGO_URI=mongodb://mongodb:27017/
+  simple-flask-app:
+    build: .
+    container_name: simple-flask-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    environment:
+      MONGO_URI: mongodb://mongodb:27017
 
 volumes:
   mongodb_data:

@@ -9,9 +9,10 @@ COPY . /app
 
 # Installer les dépendances
 RUN pip install flask
+RUN pip install pymongo
 
 # Exposer le port utilisé par l'application Flask
 EXPOSE 5000
 
 # Commande pour exécuter l'application
-CMD ["python", "app.py"]
+CMD ["flask", "run", "--host=0.0.0.0"]
