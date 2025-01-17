@@ -5,17 +5,12 @@ import os
 import pymongo # type: ignore
 from pymongo import MongoClient # type: ignore
 
+app = Flask(__name__)
 
-
-app=Flask(__name__)
-
-# Récupérer l'URI MongoDB depuis une variable d'environnement
-mongo_uri = os.getenv("MONGO_URI", "mongodb://mongodb:27017")
-client = pymongo.MongoClient(mongo_uri)
-db = client['flask_app_db']
-collection = db['requests']
-
-mongo_status = "Connected"
+mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017")
+client = MongoClient(mongo_uri)
+db = client['example_db']
+collection = db['example_collection']
 
 @app.route('/')
 def home():
@@ -31,16 +26,18 @@ def home():
 
     # Construire une réponse HTML
     records_html = "".join([f"<p>{record['ip']} - {record['date']}</p>" for record in last_records])
+
     return f"""
+    <h1>Flask App with Database</h1>
     <h1>Hello, welcome to my website!</h1>
     <p><strong>Your Name:</strong> Quentin Nempont </p>
     <p><strong>Project Name:</strong> challenge1 NET4255</p>
     <p><strong>Version:</strong> V2</p>
-    <p><strong>Server Hostname:</strong> {socket.gethostname()}</p>
+    <p><strong>Server Hostname:</strong> {request}</p>
     <p><strong>Current Date:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
     <h2>Last 10 Records:</h2>
     {records_html}
     """
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host="0.0.0.0", port=5000)
