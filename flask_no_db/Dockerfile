@@ -1,4 +1,3 @@
-# Utiliser une image Python légère comme base
 FROM python:3.9-slim
 WORKDIR /app
 COPY app.py /app

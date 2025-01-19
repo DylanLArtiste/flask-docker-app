@@ -32,8 +32,8 @@ def home():
     <h1>Hello, welcome to my website!</h1>
     <p><strong>Your Name:</strong> Quentin Nempont </p>
     <p><strong>Project Name:</strong> challenge1 NET4255</p>
-    <p><strong>Version:</strong> V2</p>
-    <p><strong>Server Hostname:</strong> {request}</p>
+    <p><strong>Version:</strong> V3.1</p>
+    <p><strong>Server Hostname:</strong> {socket.gethostbyname(socket.gethostname())}</p>
     <p><strong>Current Date:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
     <h2>Last 10 Records:</h2>
     {records_html}
