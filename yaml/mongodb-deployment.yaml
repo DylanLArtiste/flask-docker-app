@@ -18,6 +18,12 @@ spec:
         image: dylanlartiste/mongo:latest
         ports:
         - containerPort: 27017
+        livenessProbe:
+          tcpSocket:
+            port: 27017
+          initialDelaySeconds: 10 #10 secondes pour laisser le conteneur démarrer
+          periodSeconds: 10 #10 secondes entre chaque vérification
+          timeoutSeconds: 1 #1 seconde pour chaque vérification
         resources:
           requests:
             memory: "100Mi"

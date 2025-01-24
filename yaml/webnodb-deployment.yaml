@@ -18,6 +18,13 @@ spec:
           image: dylanlartiste/simple_flask_app-flask_no_db:latest # Image Docker
           ports:
             - containerPort: 5000 # Port exposé par le conteneur
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 1
           resources:
             requests:
               cpu: "100m" # 1/10 CPU

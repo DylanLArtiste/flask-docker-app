@@ -18,6 +18,13 @@ spec:
         image: dylanlartiste/simple_flask_app-flask_with_db:latest
         ports:
         - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 5 #5 secondes pour laisser le conteneur démarrer
+          periodSeconds: 10 #10 secondes entre chaque vérification
+          timeoutSeconds: 1 #1 seconde pour chaque vérification
         env :
         - name: MONGO_URI
           value: mongodb://mongodb-service:27017
