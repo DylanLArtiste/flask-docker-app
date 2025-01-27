@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: mongodb
   namespace: qnempont
@@ -21,14 +21,24 @@ spec:
         livenessProbe:
           tcpSocket:
             port: 27017
-          initialDelaySeconds: 10 #10 secondes pour laisser le conteneur démarrer
-          periodSeconds: 10 #10 secondes entre chaque vérification
-          timeoutSeconds: 1 #1 seconde pour chaque vérification
+          initialDelaySeconds: 30
+          periodSeconds: 60
+          timeoutSeconds: 10
+        volumeMounts:
+        - name: mongo-data
+          mountPath: /data/db
         resources:
           requests:
-            memory: "100Mi"
-            cpu: "100m"
+            memory: 100Mi
+            cpu: 100m
           limits:
-            memory: "200Mi"
-            cpu: "200m"
-
+            memory: 200Mi
+            cpu: 200m
+  volumeClaimTemplates:
+  - metadata:
+      name: mongo-data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
