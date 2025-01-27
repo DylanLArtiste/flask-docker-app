@@ -4,7 +4,7 @@ metadata:
   name: webnodb-deployment
   namespace: qnempont
 spec:
-  replicas: 1 # Nombre de pods
+  replicas: {{ .Values.replicaCount }} #1 # Nombre de pods
   selector:
     matchLabels:
       app: webnodb
@@ -14,10 +14,10 @@ spec:
         app: webnodb
     spec:
       containers:
-        - name: simple-flask-app
-          image: dylanlartiste/simple_flask_app-flask_no_db:latest # Image Docker
+        - name: webnodb #simple-flask-app
+          image: "{{ .Values.webnodb.image }}" #dylanlartiste/simple_flask_app-flask_no_db:latest # Image Docker
           ports:
-            - containerPort: 5000 # Port exposé par le conteneur
+            - containerPort: {{ .Values.webnodb.port }} #5000 # Port exposé par le conteneur
           livenessProbe:
             httpGet:
               path: /

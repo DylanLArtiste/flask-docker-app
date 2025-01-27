@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webdb
+  name: webdb-deployment
   namespace: qnempont
 spec:
-  replicas: {{ .Values.replicaCount }} #3
+  replicas: {{ .Values.applications.webdb.replicaCount }} #3
   selector:
     matchLabels:
       app: webdb
@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: webdb
-        image: "{{ .Values.webdb.image }}" #dylanlartiste/simple_flask_app-flask_with_db:latest
+        image: dylanlartiste/simple_flask_app-flask_with_db:latest
         ports:
-        - containerPort: {{ .Values.webdb.port }} #5000
+        - containerPort: 5000
         livenessProbe:
           httpGet:
             path: /

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-config
+  namespace: qnempont
+data:
+  DB_HOSTNAME: "{{ .Values.database.hostname }}"
+  DB_PORT: "{{ .Values.database.port }}"

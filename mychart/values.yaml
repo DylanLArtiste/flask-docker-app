@@ -1,0 +1,36 @@
+# Configuration globale pour les applications webdb et webnodb
+applications:
+  webdb:
+    replicaCount: 3 # webdb doit avoir 3 pods
+    image:
+      repository: dylanlartiste/simple_flask_app-flask_with_db
+      tag: latest
+      pullPolicy: IfNotPresent
+    service:
+      port: 8080
+      targetPort: 8080
+    ingress:
+      host: webdb.qnempont.net4255.luxbulb.org
+  webnodb:
+    replicaCount: 1 # webnodb doit avoir 1 pod
+    image:
+      repository: dylanlartiste/simple_flask_app-flask_no_db
+      tag: latest
+      pullPolicy: IfNotPresent
+    service:
+      port: 8081
+      targetPort: 8081
+    ingress:
+      host: webnodb.qnempont.net4255.luxbulb.org
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  failureThreshold: 1
+
+database:
+  hostname: mongodb-service
+  port: 27017

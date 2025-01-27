@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webnodb-deployment
+  namespace: qnempont
+spec:
+  replicas: {{ .Values.applications.webnodb.replicaCount }} #1 # Nombre de pods
+  selector:
+    matchLabels:
+      app: webnodb
+  template:
+    metadata:
+      labels:
+        app: webnodb
+    spec:
+      containers:
+        - name: webnodb #simple-flask-app
+          image: dylanlartiste/simple_flask_app-flask_no_db:latest # Image Docker
+          ports:
+            - containerPort: 5000 # Port exposé par le conteneur
+          livenessProbe:
+            httpGet:
+              path: {{ .Values.livenessProbe.httpGet.path }}
+              port: {{ .Values.livenessProbe.httpGet.port }}
+            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 200Mi
+            

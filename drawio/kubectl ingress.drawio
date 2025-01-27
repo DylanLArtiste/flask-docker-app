@@ -1,0 +1,161 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.7">
+  <diagram name="Page-1" id="XhSktehYMyleb3IIx5zf">
+    <mxGraphModel dx="840" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vyA_7n0H-f_DJJAvZBDA-1" value="Pc Hôte" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vyA_7n0H-f_DJJAvZBDA-7" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="110" y="420" width="662.5" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-4" value="&lt;div&gt;Webnodb pod&lt;/div&gt;&lt;div&gt;10.42.0.102&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="750" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-14" value="Webnodb - service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="540" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vyA_7n0H-f_DJJAvZBDA-1" target="sPCyfTyHeF5AbRM6ySB2-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="590" as="sourcePoint" />
+            <mxPoint x="450.92999999999984" y="433.24" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-25" value="&lt;div align=&quot;left&quot;&gt;80:5000&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;app : webnodb&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="655" y="900" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-26" value="webnodb -deployment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-26" target="sPCyfTyHeF5AbRM6ySB2-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="595" y="770" as="sourcePoint" />
+            <mxPoint x="645" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-60" target="sPCyfTyHeF5AbRM6ySB2-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="482.5" y="490" as="sourcePoint" />
+            <mxPoint x="400" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-29" value="&lt;div&gt;Cluster IP &lt;br&gt;&lt;/div&gt;&lt;div&gt;DNS&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="430" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-32" value="Webdb - service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="560" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-34" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="sPCyfTyHeF5AbRM6ySB2-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="455" y="490" as="sourcePoint" />
+            <mxPoint x="510" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-35" value="Mongodb -service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="540" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-36" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-35" target="sPCyfTyHeF5AbRM6ySB2-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="560" as="sourcePoint" />
+            <mxPoint x="435.8600000000001" y="490.3600000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-37" value="Réseaux de pods" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="660" width="560" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-35" target="sPCyfTyHeF5AbRM6ySB2-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="670" as="sourcePoint" />
+            <mxPoint x="510" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-39" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-32" target="sPCyfTyHeF5AbRM6ySB2-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="630" as="sourcePoint" />
+            <mxPoint x="505" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-40" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-14" target="sPCyfTyHeF5AbRM6ySB2-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="670" as="sourcePoint" />
+            <mxPoint x="510" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-41" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-4" target="sPCyfTyHeF5AbRM6ySB2-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="820" as="sourcePoint" />
+            <mxPoint x="510" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-42" value="&lt;li&gt;&lt;p&gt;&lt;strong&gt;ClusterIP (par défaut)&lt;/strong&gt; :&lt;br&gt;Le service est exposé &lt;strong&gt;uniquement à l&#39;intérieur du cluster&lt;/strong&gt;. Il utilise une IP virtuelle pour rediriger les requêtes vers les pods correspondants.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;NodePort&lt;/strong&gt; :&lt;br&gt;Le service est exposé &lt;strong&gt;à l&#39;extérieur du cluster&lt;/strong&gt; en mappant un port spécifique de chaque nœud (par exemple, &lt;code&gt;NodeIP:NodePort&lt;/code&gt;) vers les pods.&lt;/p&gt;&lt;/li&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="185" y="1040" width="530" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-44" value="&lt;div align=&quot;left&quot;&gt;80:5000&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;app : webdb&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="890" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-45" value="&lt;div&gt;27017:27017&lt;/div&gt;&lt;div&gt;app mongodb&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="890" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-46" value="&lt;div&gt;Webdb pod&lt;/div&gt;&lt;div&gt;10.42.2.44&lt;/div&gt;&lt;div&gt;10.42.1.79&lt;/div&gt;&lt;div&gt;10.42.0.76&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="760" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-48" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-46" target="sPCyfTyHeF5AbRM6ySB2-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="920" as="sourcePoint" />
+            <mxPoint x="460" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-50" value="webdb -deployment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-51" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-50" target="sPCyfTyHeF5AbRM6ySB2-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="920" as="sourcePoint" />
+            <mxPoint x="460" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-52" value="&lt;div&gt;Mongo db&lt;/div&gt;&lt;div&gt;10.42.4.109 &lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="770" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-53" value="mongodb -deployment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-54" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="sPCyfTyHeF5AbRM6ySB2-53" target="sPCyfTyHeF5AbRM6ySB2-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="920" as="sourcePoint" />
+            <mxPoint x="460" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-55" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="770" as="sourcePoint" />
+            <mxPoint x="330" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="http://webnodb.qnempont.net4255.luxbulb.org/" link="http://webnodb.qnempont.net4255.luxbulb.org/" id="sPCyfTyHeF5AbRM6ySB2-58">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="520" y="500" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="http://webdb.qnempont.net4255.luxbulb.org/" link="http://webdb.qnempont.net4255.luxbulb.org/" id="sPCyfTyHeF5AbRM6ySB2-59">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="335" y="520" width="270" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-61" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="sPCyfTyHeF5AbRM6ySB2-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="482.5" y="490" as="sourcePoint" />
+            <mxPoint x="650" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-60" value="Ingress" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="430" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sPCyfTyHeF5AbRM6ySB2-62" value="&lt;div&gt;157.159.11.201&lt;/div&gt;&lt;div&gt;Port 80&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="425" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
